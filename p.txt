@@ -1,0 +1,61 @@
+Problems :   
+1. Frequency of chars in string 
+2. 1st Uppercase in string  
+3. Print table of prime ascii (extracting from string)  
+4. Sum of all primes in a range  
+5. Palindromic primes in a range  
+6. Print elements with only odd frequency  
+7. Cousin Primes under a range  
+8. 4X4 matrix using Recursion  
+9. Separate primes & non-primes in 2 different arrays  
+10. Making a number forced prime  
+11. Delete non - duplicated elements in array  
+12. Insert element at given position in array  
+13. Find duplicates in array Recursively  
+14. Getting closest cousin Primes Recursively  
+15. Element with highest frequency  
+16. Most frequent element in array Recursively  
+17. Deleting all primes from an array  
+18. Recursively keep only numbers in array —> [12, “hey”, 11, 120] —> [12, 11, 120]  
+19. Algorithm that first finds factorial of a given number & then makes it the closest prime to itself   
+20. Algorithm to make given number it’s closest factorial  
+21. Algorithm to delete random element from an 1 dimensional array  
+22. Algorithm to Insert element at random index in a matrix  
+23. Algorithm to generate random numbers until a prime number is enountered  
+24. Algorithm to insert only randomly generated primes inside an array   
+25. Algorithm to give sum of all duplicates in a array  
+26. Algorithm to give sum of all duplicates in a matrix  
+27. Algorithm to keep on inserting element at random index in array until frequency is prime  
+28. Algorithm to keep on inserting element at random index in a matrix until frequency is prime  
+29. Algorithm to break a string into prime parts
+30. Considering only nth duplicate as a dupliicate in array  
+31. Considering only nth duplicate as a duplicate in matrix  
+32. Find largest sum in a matrice's sub arrays  
+33. Inserting all elements of array2 in array1 at random index  
+34. Inserting all elements of matrix2 in matrix1 at random index  
+35. Making random index of a matrix a forced prime array 
+36. Making frequency of all primes a prime 
+37. Keep inserting same number in array at random index until frequency is equal to the number 
+38. Keep inserting same number in matrix at random position until frequency is equal to number 
+39. Element with highest frequency in a matrix 
+40. Largest element in each row of a matrix 
+41. Insert a row in a matrix 
+42. Summation of all frequencies in an array 
+43. Summation of all frequencies in a matrix 
+44. Add row 1 of matrix1 with last row of matrix2 and so on 
+45. Filtering out all numbers from a string 
+46. Finding largest duplicate in array  
+47. Finding largest duplicate in matrix 
+48. Summation of every 2nd duplicate in an array 
+49. Summation of every 2nd duplicate element in a matrix 
+50. Adding 2 Primes then subtracting the next from the sum in a range 
+51. All pre prime of each elements in array 
+52. Summation of all 2 digit numbers in array 
+53. Summation of all 2 digit numbers in a Matrix 
+54. Matrix traversal without a single loop 
+55. Check wether a number is power of some other number 
+56. Number pattern purely recursion
+57. Sine Wave Matrix
+58. Maximum product from array of integers
+59. Max sum in the configuration
+60. Row with Maximum 1's in a matrix
