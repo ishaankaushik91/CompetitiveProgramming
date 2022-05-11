@@ -11,7 +11,7 @@ Problems :
 10. Making a number forced prime  
 11. Delete non - duplicated elements in array  
 12. Insert element at given position in array  
-13. Find duplicates in array Recursively  
+13. Find duplicates in array Recursively
 14. Getting closest cousin Primes Recursively  
 15. Element with highest frequency  
 16. Most frequent element in array Recursively  
