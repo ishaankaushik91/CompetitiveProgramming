@@ -8,74 +8,140 @@ class Node
     }
 }
 
-class DoublyLinkedList
+class Doubly
 {
     constructor()
     {
         this.head = null;
         this.tail = null;
     }
-    addTailNode(data)
-    {
-        let newNode = new Node(this.tail, data, null);
-        if (this.tail)
-        {
-            this.tail.next = newNode;
-        }
-        else
-        {
-            this.head = newNode;
-        }
-        this.tail = newNode;
-    }
     addHeadNode(data)
     {
-        let newNode = new Node(null, data, this.head);
-        if (this.head)
-        {
-            this.head.prev = newNode;
-        }
-        else
-        {
-            this.tail = newNode;
-        }
-        this.head = newNode;
-    }
-    removeTailNode()
-    {
-        if (!this.tail)
-        {
-            return null
-        }
-        if (this.tail)
-        {
-            this.tail = this.tail.prev;
-        }
-        else
-        {
-            this.head = null;
-        }
-    }
-    removeHeadNode()
-    {
+        let node = new Node(null, data, this.head);
         if (!this.head)
         {
-            return "Nothing Here";
+            this.head = node;
+            this.tail = node;
+            return;
         }
-        this.head = this.head.next;
-        if (this.head)
+        this.head = node;
+    }
+    addTailNode(data)
+    {
+        let node = new Node(this.tail, data, null);
+        if (!this.tail)
         {
-            this.head.prev = null;
-        }else
+            this.tail = node;
+            this.head = node;
+            return;
+        }
+        this.tail.next = node;
+        this.tail = node;
+    }
+    travel()
+    {
+        let someHead = this.head;
+        while (someHead)
         {
-            this.tail = null;
+            console.log(someHead.data);
+            someHead = someHead.next;
+        }
+    }
+    deleteList()
+    {
+        while (this.head)
+        {
+            this.head = this.head.next;
+        }
+        this.tail = null;
+    }
+    insertOne(data, index)
+    {
+        let size = 0, current = this.head;
+        while (current)
+        {
+            current = current.next;
+            size++
+        }
+        current = this.head;
+        if (index < 0 || index > size) return;
+
+        if (index == 0)
+        {
+            let node = new Node(null, data, this.head);
+            this.head.prev = node;
+        }
+
+        let previous;
+        for (let i = 0; i < index - 1; i++)
+        {
+            previous = current;
+            current = current.next;
+        }
+        let node = new Node(previous, data, current);
+        previous.next = node;
+        current.prev = node;
+    }
+    deletion(index)
+    {
+        if (!this.head) return;
+        
+        let size = 0, current = this.head;
+        while (current)
+        {
+            size++
+            current = current.next;
+        }
+        current = this.head;
+        if (index < 0 || index > size) return;
+
+        if (index == 0)
+        {
+            this.head = this.head.next;
+            return;
+        }
+        
+        let previous;
+        for (let i = 0; i < index - 1; i++)
+        {
+            previous = current;
+            current = current.next;
+        }
+
+        previous.next = current.next;
+        current = current.next;
+        current.prev = previous;
+    }
+    reverse()
+    {
+        if (!this.head) return;
+
+        let current = this.tail;
+        while (current)
+        {
+            console.log(current.data);
+            current = current.prev;
         }
     }
 }
 
-let ll = new DoublyLinkedList();
-ll.addTailNode(12);
-ll.addTailNode(13);
-ll.addHeadNode(15);
-ll.removeTailNode();
-console.log(ll);
+function deleteRecursive(node)
+{
+    if (node)
+    {
+        node = node.next;
+        return deleteRecursive(node);
+    }
+}
+
+let duo = new Doubly();
+duo.addHeadNode(3);
+duo.addHeadNode(2);
+duo.addHeadNode(1);
+duo.addTailNode(4);
+duo.addTailNode(5);
+duo.insertOne(100, 3);
+duo.insertOne(101, 4);
+duo.deletion(3);
+deleteRecursive(duo);
+duo.travel();
