@@ -1,13 +1,20 @@
 let a = [
+    { a: 1, rank: null },
     { a: 10, rank: null },
+    { a: 1000000, rank: null },
+    { a: 4, rank: null },
     { a: 10, rank: null },
-    { a: 10, rank: null },
-    { a: 8, rank: null },
-    { a: 8, rank: null },
     { a: 8, rank: null },
     { a: 7, rank: null },
-    { a: 6, rank: null }
+    { a: 2, rank: null },
+    {a : 7, rank : null}
   ];
+
+a.sort((a, b) => {
+    return b.a - a.a;
+});
+
+console.log(a);
 
 a[0].rank = 1;
 
