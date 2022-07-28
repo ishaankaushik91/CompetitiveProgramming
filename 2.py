@@ -1,4 +1,4 @@
-myData = list(range(3, 6));
+myData = list(range(3, 101));
 
 def PrimeCheck(start, number):
     if (start < number) :
@@ -10,7 +10,10 @@ def PrimeCheck(start, number):
 
 def MakePrime(index, myData):
     if index < len(myData):
-        if PrimeCheck(2, myData[index] == 0):
+        if PrimeCheck(2,  myData[index]) == 0:
             myData[index] += 1;
-            return MakePrime(index, myData);
+            return  MakePrime(index, myData);
         return MakePrime(index + 1, myData);
+
+MakePrime(0, myData);
+print(myData);
