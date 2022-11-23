@@ -2,6 +2,7 @@ let performanceData = [];
 // Assuming 2 servers have already sent the data
 performanceData.push({macA : 0, data : {cpu : "blah blah (Already)", memory : "blah blah (Already)"}});
 performanceData.push({macA : 8, data : {cpu : "blah blah (Already)", memory : "blah blah (Already)"}});
+performanceData.push({macA : 6, data : {cpu : "blah blah (Already)", memory : "blah blah (Already)"}});
 IncomingFromDogServer(performanceData);
 console.log(performanceData);
 
@@ -17,7 +18,7 @@ function IncomingFromDogServer(array)
 // Checks if macAddress already there then only change the data for that mac or else put a new object
 function Populate(start, array, socketData)
 {
-    if (start < 10)
+    if (start < array.length)
     {
         let alreadyThere = SearchMacA(socketData.macA, array);
         if (alreadyThere != -1)
