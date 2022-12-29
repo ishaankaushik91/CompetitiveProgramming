@@ -17,10 +17,11 @@ function removeElement(start, element)
 
 function remove(element, array, index)
 {
-    for (let j = index; j < array.length - 1; j++)
+    if (index < array.length - 1)
     {
-        array[j] = array[j + 1];
+        array[index] = array[index + 1];
+        return remove(element, array, index + 1);
     }
-        array.length -= 1;
+    array.length -= 1;
     return;
 }
