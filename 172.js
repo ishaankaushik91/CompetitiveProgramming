@@ -19,6 +19,7 @@ class Doubly
 
 let double = new Doubly();
 addNodes(1, double);
+addNodePosition(1, 50000, 5, 0, double.head);
 Travel(double.head);
 
 function addHeadNode(data, list)
@@ -61,9 +62,17 @@ function addNodes(start, list)
     }
 }
 
-addNodePosition()
+function addNodePosition(start, data, position, prev, currentHead)
 {
-    
+    if (start < position)
+    {
+        prev = currentHead;
+        currentHead = currentHead.next;
+        return addNodePosition(start + 1, data, position, prev, currentHead);
+    }
+    let newNode = new Node(prev, data, currentHead);
+    prev.next = newNode;
+    currentHead.prev = newNode;
 }
 
 function Travel(listHead)
